@@ -1,3 +1,21 @@
 body{
     margin: 0;
+    font-family: consolas;
+}
+
+header{
+    background-color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header a{
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
 }

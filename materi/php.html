@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Php</title>
+    <link rel="stylesheet" href="../style/styleCpp.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Home</a>
+        <a href="">Materi</a>
+        <a href="">About</a>
+    </header>
+
+    <div id="main-container">
+        
+    
+        <p>header ("Location: index.php"); = redirect ke halaman index php</p>
+        <p>source : Belajar php untuk pemula insert & delete (web programing unpas)</p>
+
+        <p>mysqli_fetch_assoc = untuk ambil data dari database menggunakan array associative 
+            mysqli_query = untuk mengeksekusi sebuah query,ada dua parameter yang satu koneksi yag kedua query mysqlnya
+            mysqli_affected_rows() =mengembalikan nilai jika 1 artina benar jika -1 artinya salah
+            mysqli_error()
+            msqli_num_rows() = untuk menghitung ada berapa baris yang ada di database</p>
+
+        <p><b>variabel SUPERGLOBALS</b></p>
+
+        <p>hash(); untuk mengacak string / untuk mengenkripsi</p>
+
+        <p>ceil() = untuk membulatkan angka keatas contoh 1.2 = 2, 1.1 =2</p>
+        <p>floor() = untuk membulatkan angka kebawah contoh 1.2 = 1 , 1.1 =1 </p>
+
+        <p>isset () = fungsi unuk mengecek contohnya isset button maka isset akan mencek apakah buttonnya sudah disubmit atau belom</p>
+
+        <p>die()=untuk keluar langsung</p>
+        <p>exit()=untuk keluar lagsung</p>
+
+        <p>is_string() = untuk memvalidasi apakah string atau bukan</p>
+
+        <p>htmlspecialchars() = function php untuk tag input biar gak di inject pake html</p>
+
+        <p>move_upload_files() = fungsi untuk memindahkan file atau mengupload ke server </p>
+
+        <p>stripslashes() = untuk menghilangkan karakter slashes
+            strtolower() = untuk memaksa alfabet huruf kecil semua gak boleh kapital
+            mysqli_real_escape_string() = untuk memungkinkan si usernya masukin password ada tandakutipnya dan tandakutipnya dimasukin kedatabase secara aman, duaparametr parameter 1 koneksi paramater kedua passwordnya
+            password_hash() = untuk mengenkripsi password yang dimasukkan maka dari itu di database diset field password jadi varchar trs panjangnya 255+ ,mempunyai dua parameter yaitu parameter pertama password mana yang maudienkripsi parameter kedua menenkripsinya pake algoritma apa tulis PASSWORD_DEFAULT untuk memakai algoritma yang dipilih sama si php
+            password_verify() = ngecek sebuah sring apakah sama dengan hashnya,punya 2 parameter, parameter pertama string yang belom diacak dan paramater yang kedua string yang sudah dacak</p>
+
+
+        <h2>COMPARISON OPERATOR </h2>
+        
+        <table border="1">
+            <tr>
+                <td>==</td>
+                <td>Equal</td>
+                <td>$x == $y</td>
+                <td>Returns true if $x is equal to $y</td>
+            </tr>
+
+            <tr>
+                <td>===</td>
+                <td>Identical</td>
+                <td>$x === $y</td>
+                <td>Returns true if $x is equal to $y, and they are of the same type</td>
+            </tr>
+
+            <tr>
+                <td>!=</td>
+                <td>Not equal</td>
+                <td>$x != $y</td>
+                <td>Returns true if $x is not equal to $y</td>
+            </tr>
+
+            <tr>
+                <td><></td>
+                <td>Not equal</td>
+                <td>$x <> $y</td>
+                <td>Returns true if $x is not equal to $y</td>
+            </tr>
+
+            <tr>
+                <td>!==</td>
+                <td>Not identical</td>
+                <td>$x !== $y </td>
+                <td>Returns true if $x is not equal to $y, or they are not of the same type</td>
+            </tr>
+
+            <tr>
+                <td>></td>
+                <td>Greater than</td>
+                <td>$x > $y</td>
+                <td>Returns true if $x is greater than $y</td>
+            </tr>
+
+            <tr>
+                <td><</td>
+                <td>Less than</td>
+                <td>$x < $y</td>
+                <td>Returns true if $x is less than $y</td>
+            </tr>
+
+            <tr>
+                <td>>=</td>
+                <td>Greater than or equal to</td>
+                <td>$x >= $y</td>
+                <td>Returns true if $x is greater than or equal to $y</td>
+            </tr>
+
+            <tr>
+                <td><=</td>
+                <td>Less than or equal to</td>
+                <td>$x <= $y</td>
+                <td>Returns true if $x is less than or equal to $y</td>
+            </tr>
+        </table>
+
+
+        <p>session adalah mekanisme penyimpanan informasi ke dalam variabel agar bisa digunakan di lebih dari satu halaman
+            $_SESSION["nama"] = "ISMAIL";
+            untuk mengisi data ke $_SESSION kita harus menjalankan sebuah fungsi session_start() 
+            untuk session_start() kita harus menjalankannya diawal script php,jika ingin menggunakan session selalu awali dengan session_start()
+            session_destroy() = untuk menghilangkan sebuah sesi,karena jika browser kita close atau kta restart pc maka suatu session akan dihapus
+            session_unset(); = untuk lebih yakin kalau sessionya ilang karena terkadang katanya ada yang sessionnya tidak hilang,
+            untuk menghilangkan session bisa juga dengan $_SESSION = []; 
+            misal ada dua halaman,hal 1 berisi pengisian nilai pada sebuah session dan hal 2 berisi echo session jika kita awalnya masuk hal 2 tanpa masuk hal 1 maka akan error soalnya sesiionnya belom di buat nah makanya harus masuk hal 1 dulu biar sesinya dibuat</p>
+
+        <p>COOKIE mirip seperti session jadi dia adalah informasi yang bisa diakses dihalaman apa saja di web kita tapi bedanya kalau cookie menyimpan informasi di browser/client sedangkan session menyimpan informasi di server
+            kalu mau pakai fitur cookie harus pake setcookie(); konsepnya sama seperti session_start();
+            cara buat cooki :
+            parameter pertama = nama cookie/key 
+            paramter kedua = valuenya / isinya mau apa
+            setcookie( 'nama' , 'ismail' );
+            sama seperti session,cookie juga bisa expired,cookie hanya  punya 1 sesi,
+            kita bisa menentukan kapan cookienya expired caranya : setcookie('nama', 'ismail' ,time()+60) ini kita memberi umur ke cookienya selama 1 menit (60detik)
+            misal ada dua halaman,hal 1 berisi set cookie dan hal 2 berisi echo cookie jika kita awalnya masuk hal 2 tanpa masuk hal 1 maka akan error soalnya cookienya belom di set nah makanya harus masuk hal 1 dulu biar diset cookienya
+            cookie lebih aman disimpen didatabase</p>
+
+    </div>
+
+    <footer>
+        Copyright by mail21
+    </footer>
+
+</body>
+</html>

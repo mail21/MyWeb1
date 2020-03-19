@@ -4,19 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi C++</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/styleCpp.css">
 </head>
 <body>
     <header>
-        <a href="index.html">Home</a>
+        <a href="../index.html">Home</a>
         <a href="">Materi</a>
         <a href="">About</a>
     </header>
 
     <div id="main-container">
-        
-        
+        <h1>Pengenalan : Hello World (include,using namespace std,main,cout, endl,return,komentar)</h1>
 
+
+        Kodingan Hello World : <br>
+        
+        <center><img src="../img/code.png" alt=""></center>
+        
+        
+        <br> Hasilnya : <br>
+
+        <center><img src="../img/luahelloworldoutput.png" alt=""></center>
+        
+        <p>
+            Ya.....mulai dari yang sangat dasar dulu yaitu kodingan/kode/sintaks Hello World,yang mungkin kalau pertama kali liat pasti akan bingung dan akan timbul banyak pertanyaan dan mungkin salah satunya :  "kok ada tanda kurung? , include itu apa? , cout itu apa?, dll", tenang saja nanti bakalan saya jawab sejelas mungkin dan mudah mudahan mengerti kalau tidak cari referensi lain saja oke?ehhe, dan tolong jika bisa dibaca semua agar jelas dan mengerti.
+        </p>
+        
+            <h2>include</h2>
+        
+        
+        <p>Jadi di situ ada 10 baris kode dan dua baris kosong,pertama tama apa itu include? sebelum mengenal include mari berkenalan dulu dengan yang namanya preprocessor, preprocessor itu adalah pengarah sebuah compiler karena fungsinya sendiri untuk mengatur proses kompilasi,dan apa itu kompilasi? kompilasi itu sendiri ialah  untuk mengubah  kode pemrograman menjadi bahasa mesin agar dapat dijalankan oleh komputer. Jadi cara kita manusia berdialog dengan komputer adalah dengan memakai bahasa pemrograman seperti bahasa C/C++,phyton,java,javascript,php,dan bahasa pemrograman yang lain,tiap bahasa pemrograman mempunyai tingkat efektifitas yang berbeda beda,ketika kita menulis sebuah kode maka kode itu akan dicompile , agar komputer itu mengerti apa yang ingin kita kerjakan atau ingin kita lakukan yah bisa dibilang mirip translator , nah akhirnya kita bisa lanjut ke include.</p>
+        
+        <p>
+            kalau di bahasa inggris include itu adalah ...... cek google translate dulu .......... include artinya dalam bahasa inggris adalah memasukkan ,berisi ,dan memuat .Maksudnya apa? jadi fungsi include itu sendiri di c++ iyalah memberitahu preprocessor unuk memasukkan/memuat isi file lain ke kode program kita, seperti yang bisa dilihat ada iostream didalam tanda < > , iostream itu adalah sebuah file header atau direktori yang berisi kode kode yang dibuat oleh para orang profesional yang baik hati agar kita bisa meminjam dan menaruhnya di program kita,salah satu isi header iostream ada salah satunya :
+        </p>
+        
+            <ul>
+                <li>cout</li>
+                <li>cin</li>
+                <li>endl</li>
+            </ul>
+        
+        <p>jadi kalau kita ingin menggunakan cout,cin,endl di program kita maka kita harus menginclude header iostream,</p>
+        
+        <p>
+            File header bukan hanya iostream saja ada banyak file header di c++ ada string/string.h , conio/conio.h, cmath, stdio.h, dan lain lain ,setiap header punya fungsi nya masing masing,bahkan kita bisa membuat header sendiri (ini akan dijelaskan dilain waktu),mungkin kurang lebih itulah include dan gunanya mari kita lanjut, ayo semangat belajar hahahaha......
+        </p>
+        
+            <h2>using namespace std;</h2>
+        
+        
+        <p>
+            Selanjutnya adalah using namespace std, singkatnya ini adalah sebuah perintah penyingkat untuk menggunakan sintaks/kode cout  dan cin sebenarnya masih ada lagi selain dua itu,tapi agar untuk memudahkan  makanya kita pakai cin dan cout mari kita lihat contohnya :
+        </p>
+        
+            <ul>
+                <li>Tidak memakai using namespace std;  :</li>
+        
+                    std :: cout << "Hello World " << endl; 
+                   std :: cin >> huruf;
+                
+                <li>Memakai using namespace std;  :</li>
+        
+                    cout << "Hello World " << endl; 
+                   cin >> huruf;
+            </ul>
+        
+            
+        
+       <p>
+        Bisa dilihat diatas perbedaannya  dan juga yang lebih mudah yang mana jika kita tidak memakai using namespace std; tetapi jika kita tetap menulis cout/cin tanpa std :: maka akan terjadi error , atau jika ketika lihat di error message ada bacaan ' cout was not declared in this scope ' maka itu artinya kita tidak atau lupa memakai perintah using namespace std; , bayangkan kita ingin mengotputkan banyak kata dan juga mau menginputkan sesuatu  tanpa memakai using namespace std maka akan menimbulkan keribetan,maka dari itu perintah using namespace std; akan sangat berguna.
+       </p>
+        
+        <p>
+            NB:ketika menulis using namespace std ; pastikan anda menggunakan titik koma ( ; ) dibelakang std agar mencegah error.
+        </p>
+        
+            <h2>int main ()</h2>
+        
+        <p>Ini yang paling penting dari semua kode yaitu fungsi main() ,mari kita lihat struktur kodenya :</p>
+        
+        <p>
+            int main () {
+        
+             
+            }
+        </p>
+        
+        <p>int diataas artinya adalah integer,integer adalah tipe data (ini akan dibahas di materi selanjutnya)
+        dan tanda kurung itu adalah sebuah parameter (ini materi fungsi jadi tidak dibahas disini) , jika anda hanya menulis main() tanpa menulis integer tidak akan error karena c++ mendefaultkan fungsi main itu bertipe data integer</p>
+        
+        <p>bisa dilihat ketika menulis int main() ada tanda kurung kurawal ( {} ) pembuka ( { ) dan ada kurung kurawal penutup ( } )yang berfungsi untuk memberitahu komputer untuk memproses bongkahan kode yang ada didalam kurung kurawal pembuka dan penutup , dan jika kita tidak memakai penutp/pembuka maka akan terjadi error atau jika dilihat di error message bisa dilihat akan ada bacaan ' expected '}' at end of input ' jika tidak ada penutup kurung kurawal di program anda dan akan ada bacaan ' expected declaration before '}' token  ' , maka dari itu kita harus teliti agar tidak melakukan kesalahan kecil seperti ini.</p>    
+        
+            <h2>cout/cin,endl</h2>
+        
+         <p>cout dalam artiannya ialah ' c output ' yang artinya mengoutputkan atau menampilkan sesuatu di program kita setelah di compile dan di run oleh user ,setiap bahasa pemrograman memilki pernyataan untuk mengoutput yang berbeda beda dan bahasa C++ itu memakai cout untuk mengoutput sedangkan cin (walaupun cin tidak ada di kodingan diatas tapi nanti kita akan banyak menggunakan ini ketika ngoding ) adalah dalam artiannya ialah ' c input ' yang artinya menginputkan atau memasukkan sesuatu ke dalam program kita. Biasanya data yang diinput/dimasukkan atau di-cin kan  akan ditaruh disebuah variabel (ini akan dibahas di materi selanjutnya)</p>
+        
+        endl dalam artiannya ialah 'end line' dari artinya sudah jelas ya endl itu adalah untuk membuat baris baru di dalam program ,contohnya adalah jika kita ingin mengoutput seperti dibawah ini :
+        <p></p>
+        
+        <p>
+            maka kita harus menuliskan : <br>
+            cout << "halo " << endl; <br>
+            cout << "halo " << endl; <br>
+        </p>
+        
+        <p>
+            jika tidak pakai endl maka hasil outputnya akan menjadi 'halohalo' . Adapun juga cara alternatif lain selain memakai endl yaitu menggunakan " \n " contoh :
+        </p>
+        
+        cout << "halo \n";<br>
+        cout << "halo \n";<br>
+        
+        <p>
+            \n ditaruh didalam kutip dua  setelah tulisan halo dan jika dioutput hasilnya akan sama,
+        bisa dilihat juga apapun yang ada didalam tanda kutip dua ( " ) akan muncul di hasil program,karena apapun yang ada didalam kutip akan menjadi tipe data string 
+        </p>
+        
+           <h2> return</h2>
+        
+         <p>return merupakan sebuah nilai balikan , mengapa ditulis return 0; ? karena nilai balik 0 mengindikasikan bahwa program berjalan dengan sukses</p>
+        
+            <h2>Komentar</h2> 
+        
+            <p> Komentar adalah pernyataan yang berfungsi untuk kita sendiri ketika sedang ngoding,pernyataan ini tidak akan dijalankan/proses juga oleh compiler,karena komentar biasanya digunakan sebagai catatan,komentar ada dua macam :</p>
+        
+            Komentar biasa
+            Cara membuat komentar biasa adalah hanya menulis dua tanda miring ( / ) seperti contoh diatas ,dan komentar ini hanya satu baris saja jadi ketika kita pencet enter maka akan baris selanjutnya bukanlah komentar lagi 
+            Komentar Multiline
+            Seperti namanya komentar ini bersifat multiline atau bisa dibilang user bebas untuk menentukan barisnya cara buat nya adalah seperti ini :
+        
+            /*
+            isi komentar
+        
+            */
+        
+            analoginya sama seperti dengan main yaitu mempunyai pembuka ( /* ) dan penutup (*/)
+        
+        
+        
+        
+        <h4>Hal yang perlu diingat :</h4>
+        <ul>
+            <li>Komputer akan mengcompile kode dari atas kiri ke kanan lalu kebawah dari kiri ke kanan dan seterusnya sampai tidak ada kode lagi </li>
+            <li>Titik koma ( ; ) bisa dibilang dan diibaratkan  sebuah titik (.) kalau kita sedang menulis jadi makanya kita harus teliti menaruh titik koma ( ; ) biasanya sehabis suatu pernyataan akan diakhiri dengan titik koma ( ; )</li>
+        </ul>
+            
+            
+        
     </div>
 
     <footer>

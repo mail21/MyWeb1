@@ -14,35 +14,31 @@
     </header>
 
     <div id="main-container">
-        <div class="card">
+        <div class="card" id="cphp">
             <img src="img/php.png" alt="Logo PHP" style="width:100%">
             <div class="container">
               <h4><b>OOP PHP</b></h4> 
-              <p>Interior Designer</p> 
             </div>
         </div>
 
-        <div class="card">
-            <img src="img/cpp.png" alt="Logo PHP" style="width:100%">
+        <div class="card" id="ccpp">
+            <img src="img/cpp.png" alt="Logo cpp" style="width:100%">
             <div class="container">
               <h4><b>C++</b></h4> 
-              <p>Interior Designer</p> 
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="cpython">
             <img src="img/Python-logo-all.jpg" alt="Logo PHP" style="width:100%">
             <div class="container">
-              <h4><b>OOP PHP</b></h4> 
-              <p>Interior Designer</p> 
+              <h4><b>Python</b></h4> 
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="cmysql">
             <img src="img/mysql-logo.png" alt="Logo PHP" style="width:100%">
             <div class="container">
-              <h4><b>C++</b></h4> 
-              <p>Interior Designer</p> 
+              <h4><b>Mysql</b></h4>
             </div>
         </div>
         
@@ -52,5 +48,13 @@
     <footer>
         Copyright by mail21
     </footer>
+
+    <script>
+        let cardCpp = document.querySelector("#ccpp");
+
+        cardCpp.addEventListener("click", function(params) {
+            window.location.href = "materi/cpp.html"
+        });
+    </script>
 </body>
 </html>

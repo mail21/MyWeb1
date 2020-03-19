@@ -31,6 +31,7 @@ header a{
     transition: 0.3s;
     width: 250px;
     border-radius: 5px;
+    cursor:pointer;
   }
 
   
